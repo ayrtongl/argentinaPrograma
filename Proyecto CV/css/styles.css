@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.bodyBackground {
+    width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background-color: #000000;
+}
+
+.bodyBackground img{
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    transform: scale(1.1);
+    transform: translate(0, -25%);
+    backface-visibility: hidden;
+}
+
+.contHero{
+    position: absolute;
+    color: #FFFFFF;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profilePic {
+    height: 150%;
+    width: 100%;
+    border-radius: 50%;
+    transform: translate(-25%,-15%);
+    overflow: hidden;
+    background-color: #FFFFFF;
+    background-position: center;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilePic img{
+    width: 100%;
+}
+
+
+.contDer{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    z-index: 1;
+    width: 90%;
+}
+
+.titulos{
+    text-align: right;
+    margin-top: 5em;
+    margin-right: 5em;
+}
+
+h2 {
+    font-size: 5em;
+}
+
+h3{
+    font-size: 2.2em;
+    text-align: right;
+    font-weight: 300;
+}
+
+.botonCv {
+    height: 3.3em;
+    width: 6.5em;
+    background-color: #461F74;
+    margin-bottom: 5em;
+    margin-right: 5em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.botonCv:hover {
+
+    cursor: pointer;
+    background-color: #5d328e;
+
+}
+
+.botonCv p {
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.info{
+    position: absolute;
+    height: 100vh;
+    top: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cardsConteiner {
+    display: grid;
+    height: 90%;
+    padding: 0 25px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "cardPersonal cardPersonal cardContacto cardSkill"
+    "cardExperiencia cardExperiencia cardSobreMi cardSobreMi";
+    gap: 30px;
+}
+
+.cards {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 14px #00000027;
+    border-radius: 25px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards h3{
+    font-weight: 700;
+    text-align: left;
+}
+
+.datosPersonales{
+    grid-area: cardPersonal;
+}
+
+/* .datosPersonales .contDatos{
+    align-content: space-around;
+} */
+
+.contDatos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 80%;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.datos{
+    width: 30%;
+}
+
+.datos p{
+    margin-left: 1em;
+}
+
+.contacto{
+    grid-area: cardContacto;
+}
+
+.contacto .contDatos {
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.contacto .datos{
+    width: 100%;
+}
+
+.skills{
+    grid-area: cardSkill;
+}
+
+.skillCont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    height: 100%;
+    align-content: center;
+}
+
+.skill{
+    background-color: #461F74;
+    border-radius: 5px;
+    height: 2rem;
+    padding: 0.3rem 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill h4{
+    color: #FFFFFF;
+}
+
+
+.experiencia{
+    grid-area: cardExperiencia;
+}
+
+.experiencia .datos{
+    width: 100%;
+}
+
+
+
+.sobreMi {
+    grid-area: cardSobreMi;
+}
+
+.sobreMi .datos{
+    width: 100%;
+}
+
